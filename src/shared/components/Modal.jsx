@@ -24,12 +24,12 @@ const ModalOverlay = (props) => {
 }
 
 const Modal = (props) => {
-    return <>
+    return <React.Fragment>
         {props.show && <Backdrop onClick={props.onCancel} />}
         <CSSTransition in={props.show} mountOnEnter unmountOnExit timeout={200} className="modal">
             <ModalOverlay {...props} />
         </CSSTransition>
-    </>
+    </React.Fragment>
 }
 
 export default Modal;

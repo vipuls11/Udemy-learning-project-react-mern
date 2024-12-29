@@ -6,7 +6,7 @@ const Users = () => {
     const USERS = [
         {
             id: 'u1',
-            name: 'Vipul Vishwakrama',
+            name: 'Rahul Vishwakrama',
             image: 'https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
             places: 3
         },
@@ -15,6 +15,13 @@ const Users = () => {
             name: 'Vipul Vishwakrama',
             image: 'https://wallpapercave.com/wp/wp3146782.jpg',
             places: 4
+        }
+        ,
+        {
+            id: 'u3',
+            name: 'Vishal Vishwakrama',
+            image: 'https://wallpapercave.com/wp/wp3146782.jpg',
+            places: 6
         }
     ]
     return <>

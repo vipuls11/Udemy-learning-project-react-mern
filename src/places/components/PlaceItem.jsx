@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './PlaceItem.css'
 import Card from '../../shared/components/UIElement/Card'
 import Modal from '../../shared/components/Modal'
-// import { Button } from 'react-native'
+import Button from '../../shared/components/FormElements/Button'
+
 
 const PlaceItem = (props) => {
     const [showMap, setShowMap] = useState(false)
@@ -16,7 +17,7 @@ const PlaceItem = (props) => {
     }
 
     return (
-        <>
+        <React.Fragment>
             <Modal
                 show={showMap}
                 onCancel={closeMapHandler}
@@ -45,7 +46,7 @@ const PlaceItem = (props) => {
                     </div>
                 </Card>
             </li>
-        </>
+        </React.Fragment>
     )
 }
 
