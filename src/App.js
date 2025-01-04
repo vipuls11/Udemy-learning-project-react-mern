@@ -23,7 +23,7 @@ function App() {
           <Route path="/:userId/places" exact>
             <UserPlaces />
           </Route>
-          <Route path="/new-place" exact>
+          <Route path="/new/place" exact>
             <NewPlace />
           </Route>
           {/* //To redirect the path when path is differnce it's redirect to this path */}
