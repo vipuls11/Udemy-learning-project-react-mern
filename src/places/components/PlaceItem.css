@@ -7,20 +7,33 @@
 }
 
 .place-item__info {
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
 }
-
+.place-item__info  p{
+  padding: 0px;
+  margin: 0px;
+}
+.place-item__info  h2{
+  padding: 0px;
+  margin: 0.2rem 0rem;
+}
 .place-item__image {
   width: 100%;
   height: 12.5rem;
   margin-right: 1.5rem;
 }
-
+.place-item__image img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+} 
 .place-item__modal-actions {
   text-align: right;
 }
-
+.place-item__actions{
+  text-align: center;
+}
 .place-item__actions button,
 .place-item__actions a {
   margin: 0.5rem;

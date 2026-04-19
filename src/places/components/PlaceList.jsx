@@ -4,6 +4,7 @@ import Card from '../../shared/components/UIElement/Card'
 import PlaceItem from './PlaceItem';
 
 const PlaceList = (props) => {
+    console.log(props,"placessss")
     if (props.items.length === 0) {
         return (
             <div className='place-list center'>
@@ -15,7 +16,7 @@ const PlaceList = (props) => {
         );
     }
     return (<ul className='place-list'>
-        {props.items.map(place => (<PlaceItem key={place.id} id={place.id} image={place.imageUrl} title={place.title} description={place.description} adress={place.address} creatorId={place.creator} coordinates={place.location} />))}
+        {props.items.map(place => (<PlaceItem key={place._id} id={place._id} image={place.placeImage} title={place.title} description={place.description} adress={place.address} creatorId={place.creator} coordinates={place.location} />))}
     </ul>);
 };
 
