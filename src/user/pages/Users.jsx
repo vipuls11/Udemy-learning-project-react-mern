@@ -35,7 +35,7 @@ const Users = () => {
         const fetchUsers = async () =>{
             try{
                 const responseData = await sendRequest(`${process.env.REACT_APP_API_AUTH_URI}`);
-                // console.log(responseData.users, "vipul")
+                 console.log(responseData.users, "vipul")
                 setLoadedUsers(responseData.users)
             }catch(err){
                 console.log("Something Failed to effect data")

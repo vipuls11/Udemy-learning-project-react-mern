@@ -7,6 +7,8 @@ const Map = props => {
     const { center, zoom } = props;
 
     useEffect(() => {
+        if (!mapRef.current) return;
+        
         const map = new window.google.maps.Map(mapRef.current, {
             center: center,
             zoom: zoom
@@ -14,10 +16,14 @@ const Map = props => {
         new window.google.maps.Marker({
             position: center,
             map: map
-        }, [center, zoom])
-    })
+        });
+    }, [center, zoom])
     return (
-        <div className={`map ${props.className}`} style={props.style}>Map</div>
+        <div 
+            ref={mapRef}
+            className={`map ${props.className}`} 
+            style={props.style}
+        ></div>
     )
 }
 
