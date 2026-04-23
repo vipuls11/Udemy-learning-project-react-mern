@@ -33,7 +33,7 @@ const UpdatePlace = () => {
     },
     false
   );
-console.log(placeId, "update")
+//console.log(placeId, "update")
   useEffect(() => {
     const fetchPlace = async () => {
       try {

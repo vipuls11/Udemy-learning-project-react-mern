@@ -49,7 +49,7 @@ const UserPlaces = () => {
       const [loadedPlaces, setLoadedPlaces] = useState([]);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const userId = useParams().userId;
-console.log(userId, "vipul")
+// console.log(userId, "vipul")
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -69,7 +69,7 @@ console.log(userId, "vipul")
       prevPlaces.filter(place => place.id !== deletedPlaceId)
     );
   };
-  console.log(loadedPlaces, "sdsdfdfs")
+  // console.log(loadedPlaces, "sdsdfdfs")
     return (
           <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />

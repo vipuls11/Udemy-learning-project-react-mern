@@ -45,7 +45,7 @@ false
         },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
-      console.log(formState.inputs.useravatar);
+
     } else {
       setFormData(
         {
@@ -61,7 +61,6 @@ false
         },
         false
       );
-      console.log(formState.inputs.useravatar);
     }
     setIsLoginMode(prevMode => !prevMode);
   };
@@ -83,8 +82,6 @@ false
             'Content-Type': 'application/json'
           }
         );
-
-        console.log(responseData.user?._id,responseData.accessToken, "vipul")
     auth.login(responseData.user?._id, responseData.accessToken);
       } catch (err) {}
     } else {
@@ -110,7 +107,7 @@ false
 
   return (
     <React.Fragment>
-      {successMessage && <SuccessModal successMessage={successMessage} onClear={clearSuccess} />} 
+      {successMessage && <SuccessModal header="Success Message" successMessage={successMessage} onClear={clearSuccess} />} 
       <ErrorModal error={error} onClear={clearError} />
       <Card className="authentication">
      

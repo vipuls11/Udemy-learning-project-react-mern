@@ -13,7 +13,7 @@ import { AuthContext } from '../../shared/context/auth-context'
 const PlaceItem = (props) => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const auth = useContext(AuthContext);
-   console.log(auth.userId,"UserID", props.creatorId)
+   //console.log(auth.userId,"UserID", props.address)
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -44,14 +44,14 @@ const PlaceItem = (props) => {
       props.onDeletePlace(props.id);
     } catch (err) {}
   };
-console.log(`${process.env.REACT_APP_API_Place_URI}/place/${props.id}`,"pathh")
+// console.log(`${process.env.REACT_APP_API_Place_URI}/place/${props.id}`,"pathh")
     return (
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showMap}
         onCancel={closeMapHandler}
-        header={props.address}
+        header={props.title}
         contentClass="place-item__modal-content"
         footerClass="place-item__modal-actions"
         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
@@ -78,7 +78,7 @@ console.log(`${process.env.REACT_APP_API_Place_URI}/place/${props.id}`,"pathh")
       >
         <p>
           Do you want to proceed and delete this place? Please note that it
-          can't be undone thereafter.
+          can't be undone there after.
         </p>
       </Modal>
       <li className="place-item">

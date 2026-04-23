@@ -5,3 +5,13 @@
   width: 90%;
   max-width: 40rem;
 }
+
+.no-place {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 30rem;
+  padding:10px;
+  text-align:center
+}

@@ -17,7 +17,7 @@ import UpdatePlace from "./places/pages/UpdatePlace.jsx";
 
 function App() {
   const {token, login, logout, userId} = useAuth() 
-  console.log(token,"user",userId)
+  // console.log(token,"user",userId)
   let routes;
   if(token){
     routes=(

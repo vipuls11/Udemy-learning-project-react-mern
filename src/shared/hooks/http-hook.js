@@ -27,12 +27,12 @@ export const useHttpClient = () => {
                 if (!response.ok) {
                     throw new Error(responseData.message)
                 }
-                console.log(responseData.message, "message")
+                // console.log(responseData.message, "message")
                 setIsLoading(false)
-                setTimeout(() => {
-                    setSuccessMessage(`${responseData.message}`);
-                }, 3000);
 
+                
+                    setSuccessMessage(`${responseData.message}`);
+             
                 return responseData
             } catch (err) {
                 if (err.name === 'AbortError') {

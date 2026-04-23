@@ -10,7 +10,7 @@ function UserItem(props) {
     return <>
         <li className='user-item' key={props.id}>
             <Card className="user-item__content">
-                <Link to={`/${props.id}/places`}>
+                <Link to={props.placeCount ? `/${props.id}/places`: "/places/new"}>
                     <div className="user-item__image">                      
                         <Avatar image={props.image} alt={props.name} />
                     </div>

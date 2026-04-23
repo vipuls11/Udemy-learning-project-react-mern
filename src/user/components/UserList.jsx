@@ -3,7 +3,7 @@ import UserItem from './UserItem';
 import './UserList.css';
 
 const UserList = (props) => {
-  console.log(props, "User")
+  // console.log(props, "User")
   if (props.items.length === 0) {
     return (
       <div className='center'>
