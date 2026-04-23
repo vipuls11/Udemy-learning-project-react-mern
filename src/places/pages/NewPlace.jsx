@@ -58,7 +58,7 @@ const NewPlace = () => {
       });
       history.push('/');
     } catch (err) {}
-    console.log(`${process.env.REACT_APP_API_Place_URI}/place`, "New Place")
+    //console.log(`${process.env.REACT_APP_API_Place_URI}/place`, "New Place")
   };
   return (
     <React.Fragment>

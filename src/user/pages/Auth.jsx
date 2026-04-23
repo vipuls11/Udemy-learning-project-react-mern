@@ -67,6 +67,7 @@ false
 
 
   const authSubmitHandler = async event => {
+        debugger;
     event.preventDefault();
 
     if (isLoginMode) {
@@ -83,7 +84,9 @@ false
           }
         );
     auth.login(responseData.user?._id, responseData.accessToken);
-      } catch (err) {}
+      } catch (err) {
+        console.error(err)
+      }
     } else {
       try {
         const formData = new FormData();
@@ -97,7 +100,7 @@ false
           formData,           
         );
         auth.login(responseData.user?._id, responseData.accessToken);
-
+              setIsLoginMode(true);
       } catch (err) {}
     }
   };
