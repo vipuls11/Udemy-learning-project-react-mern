@@ -83,7 +83,7 @@ false
             'Content-Type': 'application/json'
           }
         );
-    auth.login(responseData.user?._id, responseData.accessToken);
+    auth.login(responseData.user?._id, responseData.accessToken,);
       } catch (err) {
         console.error(err)
       }

@@ -1,4 +1,4 @@
-.nav-links {
+/* .nav-links {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -25,9 +25,11 @@
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-  background: #f8df00;
-  border-color: #292929;
+  background: transparent;
+  border-color: #292929; 
   color: #292929;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .nav-links button {
@@ -71,5 +73,134 @@
   .nav-links button:active {
     background: #f8df00;
     color: #292929;
+  }
+} */
+
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%; /* Slightly wider for better breathing room on mobile */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05); /* Soft shadow for mobile drawer depth */
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  margin: 1.25rem 0;
+}
+
+/* Links Base Styles */
+.nav-links a {
+  color: #292929;
+  text-decoration: none;
+  padding: 0.5rem 0; /* Changed to top/bottom padding for the custom underline */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative; /* Required for the animated underline */
+  transition: color 0.3s ease;
+}
+
+/* Custom Animated Underline Effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #292929;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover::after,
+.nav-links a:active::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  color: #000000;
+}
+
+/* Button Base Styles */
+.nav-links button {
+  cursor: pointer;
+  border: 1px solid #292929;
+  color: #292929;
+  background: transparent;
+  padding: 0.6rem 1.2rem; /* More balanced padding */
+  border-radius: 4px; /* Softens the sharp corners */
+  font: inherit;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-links button:focus {
+  outline: 2px solid rgba(41, 41, 41, 0.5);
+  outline-offset: 2px;
+}
+
+.nav-links button:hover,
+.nav-links button:active {
+  background: #292929;
+  color: #ffffff;
+  transform: translateY(-1px); /* Subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tablet & Desktop Viewports */
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+    background: transparent;
+    width: auto; /* Lets the content dictate width naturally */
+    box-shadow: none;
+  }
+  
+  .nav-links li {
+    margin: 0 1.2rem; /* Increased spacing between items */
+  }
+  
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.85); /* Slightly muted white for a premium look */
+  }
+
+  /* Swap underline color to match white text on desktop */
+  .nav-links a::after {
+    background-color: #ffffff;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a:active,
+  .nav-links a.active {
+    color: #ffffff;
+  }
+  
+  .nav-links button {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    margin-left: 0.5rem;
+  }
+  
+  .nav-links button:hover,
+  .nav-links button:active {
+    background: #ffffff;
+    color: #292929;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 }

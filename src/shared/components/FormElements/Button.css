@@ -30,6 +30,7 @@
 .button--inverse:active {
   background: #ff4382;
   border-color: #ff4382;
+  color: #fff
 }
 
 .button:disabled,

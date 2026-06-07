@@ -1,4 +1,4 @@
-.authentication__header {
+/* .authentication__header {
   color: white;
   text-align: center;
 }
@@ -13,4 +13,40 @@
 
 .authentication form {
   margin-bottom: 1rem;
+} */
+
+/* Authentication Page Title */
+.authentication__header {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: -5rem; /* Pulls the card closer to the heading naturally */
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Authentication Card Container */
+.authentication {
+  width: 90%;
+  max-width: 400px; /* Modernized from rem to a standard max-width pixel count */
+  margin: 7rem auto;
+  background: #ffffff;
+  border-radius: 12px; /* Smooth, modern rounded corners */
+  padding: 2.5rem 2rem; /* Generous padding for an open, clean look */
+  
+  /* Multi-layered soft shadow for depth and premium feel */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 
+              0 4px 12px rgba(0, 0, 0, 0.04);
+              
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Form Layout */
+.authentication form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Seamlessly spaces out form inputs without breaking layouts */
+  margin-bottom: 1.5rem;
 }
