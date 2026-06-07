@@ -2,10 +2,10 @@
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    width: 90%;
-    max-width: 90rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 72rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.25rem;
     text-decoration: none;
 }

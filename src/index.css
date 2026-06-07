@@ -1,16 +1,61 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --color-bg: #f4f7fb;
+  --color-bg-deep: #111827;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8fafc;
+  --color-text: #1f2937;
+  --color-muted: #64748b;
+  --color-primary: #e11d48;
+  --color-primary-dark: #be123c;
+  --color-primary-soft: #fff1f2;
+  --color-accent: #0f766e;
+  --color-danger: #dc2626;
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 18px 45px rgba(15, 23, 42, 0.14);
+  --radius: 8px;
+}
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", "Open Sans", sans-serif;
+  color: var(--color-text);
 }
 
 body {
   margin: 0;
-  background: #4d4d4d;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(225, 29, 72, 0.14), transparent 28rem),
+    linear-gradient(180deg, #f8fafc 0%, var(--color-bg) 42%, #eef2f7 100%);
+  color: var(--color-text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000, transparent 75%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
 }
 
 .slide-in-left-enter {
@@ -39,4 +84,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
 }

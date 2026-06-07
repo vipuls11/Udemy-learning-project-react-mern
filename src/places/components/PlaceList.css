@@ -2,8 +2,8 @@
   list-style: none;
   margin: 1rem auto;
   padding: 0;
-  width: 90%;
-  max-width: 40rem;
+  width: 100%;
+  max-width: 46rem;
 }
 
 .no-place {
@@ -12,6 +12,6 @@
   padding: 0;
   width: 90%;
   max-width: 30rem;
-  padding:10px;
-  text-align:center
+  padding: 1.25rem;
+  text-align: center;
 }

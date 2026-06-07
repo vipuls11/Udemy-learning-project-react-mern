@@ -17,36 +17,30 @@
 
 /* Authentication Page Title */
 .authentication__header {
-  color: #ffffff;
+  color: var(--color-text);
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: -5rem; /* Pulls the card closer to the heading naturally */
-  letter-spacing: -0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0;
 }
 
-/* Authentication Card Container */
 .authentication {
   width: 90%;
-  max-width: 400px; /* Modernized from rem to a standard max-width pixel count */
-  margin: 7rem auto;
+  max-width: 420px;
+  margin: 0 auto;
   background: #ffffff;
-  border-radius: 12px; /* Smooth, modern rounded corners */
-  padding: 2.5rem 2rem; /* Generous padding for an open, clean look */
-  
-  /* Multi-layered soft shadow for depth and premium feel */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 
-              0 4px 12px rgba(0, 0, 0, 0.04);
-              
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(148, 163, 184, 0.18);
   text-align: center;
   box-sizing: border-box;
 }
 
-/* Form Layout */
 .authentication form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* Seamlessly spaces out form inputs without breaking layouts */
+  gap: 0.4rem;
   margin-bottom: 1.5rem;
 }
