@@ -80,15 +80,15 @@
 .nav-links {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  width: 60%; /* Slightly wider for better breathing room on mobile */
+  padding: 1.5rem 0;
+  width: min(78vw, 20rem);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #ffffff;
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05); /* Soft shadow for mobile drawer depth */
+  box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
 }
 
@@ -98,13 +98,14 @@
 
 /* Links Base Styles */
 .nav-links a {
-  color: #292929;
+  color: var(--color-text);
   text-decoration: none;
-  padding: 0.5rem 0; /* Changed to top/bottom padding for the custom underline */
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  position: relative; /* Required for the animated underline */
-  transition: color 0.3s ease;
+  padding: 0.55rem 0.2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 /* Custom Animated Underline Effect */
@@ -116,7 +117,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #292929;
+  background-color: var(--color-primary);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -131,19 +132,20 @@
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-  color: #000000;
+  color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 /* Button Base Styles */
 .nav-links button {
   cursor: pointer;
-  border: 1px solid #292929;
-  color: #292929;
+  border: 1px solid rgba(225, 29, 72, 0.28);
+  color: var(--color-primary);
   background: transparent;
-  padding: 0.6rem 1.2rem; /* More balanced padding */
-  border-radius: 4px; /* Softens the sharp corners */
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
   font: inherit;
-  font-weight: 500;
+  font-weight: 700;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -154,10 +156,11 @@
 
 .nav-links button:hover,
 .nav-links button:active {
-  background: #292929;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: #ffffff;
-  transform: translateY(-1px); /* Subtle lift effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(225, 29, 72, 0.22);
 }
 
 
@@ -166,21 +169,22 @@
   .nav-links {
     flex-direction: row;
     background: transparent;
-    width: auto; /* Lets the content dictate width naturally */
+    width: auto;
+    height: auto;
+    padding: 0;
     box-shadow: none;
   }
   
   .nav-links li {
-    margin: 0 1.2rem; /* Increased spacing between items */
+    margin: 0 0.65rem;
   }
   
   .nav-links a {
-    color: rgba(255, 255, 255, 0.85); /* Slightly muted white for a premium look */
+    color: rgba(255, 255, 255, 0.82);
   }
 
-  /* Swap underline color to match white text on desktop */
   .nav-links a::after {
-    background-color: #ffffff;
+    background-color: #fda4af;
   }
   
   .nav-links a:hover,
@@ -190,15 +194,16 @@
   }
   
   .nav-links button {
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.34);
     color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
     margin-left: 0.5rem;
   }
   
   .nav-links button:hover,
   .nav-links button:active {
     background: #ffffff;
-    color: #292929;
+    color: var(--color-bg-deep);
     border-color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
